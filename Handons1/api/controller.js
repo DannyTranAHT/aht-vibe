@@ -34,7 +34,16 @@ exports.calculate = function(req, res) {
           throw new Error("Division by zero is not allowed");
         }
         return Number(a) / Number(b); 
-      }
+      },
+      power:    function(a, b) { return Math.pow(Number(a), Number(b)) },
+      modulus:  function(a, b) { return Number(a) % Number(b) },
+      squareRoot: function(a) {
+        if (Number(a) < 0) {
+          throw new Error("Square root of negative number is not allowed");
+        }
+        return Math.sqrt(Number(a));
+      },
+      absolute: function(a) { return Math.abs(Number(a)) }
     };
 
     var operation = operations[req.query.operation];

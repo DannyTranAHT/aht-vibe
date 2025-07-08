@@ -33,6 +33,20 @@ function calculate(operand1, operand2, operation) {
         case '/':
             uri += "?operation=divide";
             break;
+        case 'power':
+            uri += "?operation=power";
+            break;
+        case 'modulus':
+            uri += "?operation=modulus";
+            break;
+        case 'squareRoot':
+            uri += "?operation=squareRoot";
+            operand2 = null; // square root only needs one operand
+            break;
+        case 'absolute':
+            uri += "?operation=absolute";
+            operand2 = null; // absolute only needs one operand
+            break;
 
         default:
             setError();
@@ -143,6 +157,20 @@ document.addEventListener('keypress', (event) => {
         operationPressed(event.key);
     } else if (event.key == '=') {
         equalPressed();
+    } else if (event.key == 'Enter') {
+        equalPressed();
+    }
+    else if (event.key == 'Escape') {
+        clearPressed();
+    }
+    else if (event.key == 'Backspace') {
+        clearEntryPressed();
+    }
+    else if (event.key == ' ') {
+        // Do nothing for space key
+    }
+    else {
+        console.log("Unhandled key: " + event.key);
     }
 });
 
