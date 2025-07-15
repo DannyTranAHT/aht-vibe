@@ -1,0 +1,29 @@
+aht-vibe/Vibe/todo_app/todo-app/src/assets/styles/variables.css */
+:root {
+  --color-background: #ffffff;
+  --color-background-soft: #f8f8f8;
+  --color-text: #2c3e50;
+  --color-text-light: #6c757d;
+  --color-heading: #1a1a1a;
+  --color-border: #e2e8f0;
+  --color-primary: #4CAF50;
+  --color-secondary: #9e9e9e;
+  --color-danger: #f44336;
+  
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-background-soft: #242424;
+    --color-text: #ffffff;
+    --color-text-light: #9ca3af;
+    --color-heading: #ffffff;
+    --color-border: #374151;
+  }
+}
